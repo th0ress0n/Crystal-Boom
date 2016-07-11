@@ -67,21 +67,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     func startGame(){
-        
         spawnRow()
-        
         gameon = true
     }
     
     
-    
     func spawnRow(){
-        
-        for (index, gem) in currentLevel.data[rowCount].enumerate() {
-            print("Item \(index): \(gem)")
-            spawnCrystal(CGFloat(index),gemID: Int(gem as! NSNumber))
-        }
-        
+        for (index, gem) in currentLevel.data[rowCount].enumerate() { spawnCrystal(CGFloat(index),gemID: Int(gem as! NSNumber))}
         rowCount = rowCount+1
         if rowCount > currentLevel.data.count{ lastRow = true }
     }
