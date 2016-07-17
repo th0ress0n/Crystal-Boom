@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A40C104D1D3C26BA00ADAF28 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C104C1D3C26BA00ADAF28 /* MenuScene.swift */; };
+		A40C104F1D3C26E400ADAF28 /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C104E1D3C26E400ADAF28 /* LevelScene.swift */; };
+		A40C10531D3C443100ADAF28 /* cr_surprise.png in Resources */ = {isa = PBXBuildFile; fileRef = A40C10511D3C443100ADAF28 /* cr_surprise.png */; };
+		A40C10541D3C443100ADAF28 /* cr_bomb.png in Resources */ = {isa = PBXBuildFile; fileRef = A40C10521D3C443100ADAF28 /* cr_bomb.png */; };
 		A49EE9B51D2E9C0B009E3D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49EE9B41D2E9C0B009E3D49 /* AppDelegate.swift */; };
 		A49EE9B71D2E9C0B009E3D49 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A49EE9B61D2E9C0B009E3D49 /* GameScene.sks */; };
 		A49EE9B91D2E9C0B009E3D49 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49EE9B81D2E9C0B009E3D49 /* GameScene.swift */; };
@@ -61,6 +65,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A40C104C1D3C26BA00ADAF28 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		A40C104E1D3C26E400ADAF28 /* LevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
+		A40C10511D3C443100ADAF28 /* cr_surprise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cr_surprise.png; sourceTree = "<group>"; };
+		A40C10521D3C443100ADAF28 /* cr_bomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cr_bomb.png; sourceTree = "<group>"; };
 		A49EE9B11D2E9C0B009E3D49 /* Crystal Boom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crystal Boom.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A49EE9B41D2E9C0B009E3D49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A49EE9B61D2E9C0B009E3D49 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -128,6 +136,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A40C10501D3C442000ADAF28 /* specials */ = {
+			isa = PBXGroup;
+			children = (
+				A40C10511D3C443100ADAF28 /* cr_surprise.png */,
+				A40C10521D3C443100ADAF28 /* cr_bomb.png */,
+			);
+			name = specials;
+			sourceTree = "<group>";
+		};
 		A49EE9A81D2E9C0A009E3D49 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +176,8 @@
 				A49EE9BC1D2E9C0B009E3D49 /* Main.storyboard */,
 				A49EE9BF1D2E9C0B009E3D49 /* Assets.xcassets */,
 				A49EE9C11D2E9C0B009E3D49 /* LaunchScreen.storyboard */,
+				A40C104C1D3C26BA00ADAF28 /* MenuScene.swift */,
+				A40C104E1D3C26E400ADAF28 /* LevelScene.swift */,
 				A49EE9C41D2E9C0B009E3D49 /* Info.plist */,
 				A49EE9EB1D2EA17F009E3D49 /* Character.swift */,
 				A49EE9EF1D2EA2EE009E3D49 /* global.swift */,
@@ -207,6 +226,7 @@
 		A49EEA051D3193A3009E3D49 /* Gems */ = {
 			isa = PBXGroup;
 			children = (
+				A40C10501D3C442000ADAF28 /* specials */,
 				A49EEA061D3193E5009E3D49 /* cr_diamond_purple.png */,
 				A49EEA071D3193E5009E3D49 /* cr_round_aqua.png */,
 				A49EEA081D3193E5009E3D49 /* cr_diamond_yellow.png */,
@@ -338,7 +358,9 @@
 				A49EE9B71D2E9C0B009E3D49 /* GameScene.sks in Resources */,
 				A49EEA151D3193E5009E3D49 /* cr_triangle_red.png in Resources */,
 				A49EEA121D3193E5009E3D49 /* cr_round_pink.png in Resources */,
+				A40C10541D3C443100ADAF28 /* cr_bomb.png in Resources */,
 				A4A459731D3712E100D3B70F /* Explosion.sks in Resources */,
+				A40C10531D3C443100ADAF28 /* cr_surprise.png in Resources */,
 				A49EE9C31D2E9C0B009E3D49 /* LaunchScreen.storyboard in Resources */,
 				A4A4595C1D35608700D3B70F /* Explode.scnp in Resources */,
 				A49EEA131D3193E5009E3D49 /* cr_square_red.png in Resources */,
@@ -388,6 +410,8 @@
 				A49EE9BB1D2E9C0B009E3D49 /* GameViewController.swift in Sources */,
 				A49EE9F41D2EC65F009E3D49 /* Projectile.swift in Sources */,
 				A49EE9B51D2E9C0B009E3D49 /* AppDelegate.swift in Sources */,
+				A40C104D1D3C26BA00ADAF28 /* MenuScene.swift in Sources */,
+				A40C104F1D3C26E400ADAF28 /* LevelScene.swift in Sources */,
 				A49EE9F21D2EAABA009E3D49 /* Cannon.swift in Sources */,
 				A49EE9EC1D2EA17F009E3D49 /* Character.swift in Sources */,
 			);

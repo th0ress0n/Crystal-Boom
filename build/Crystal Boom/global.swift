@@ -25,6 +25,9 @@ let crystalFiveTexture = SKTexture(imageNamed: "cr_square_red.png")
 let crystalSixTexture = SKTexture(imageNamed: "cr_diamond_purple.png")
 let crystalSevenTexture = SKTexture(imageNamed: "cr_triangle_aqua.png")
 let crystalEightTexture = SKTexture(imageNamed: "cr_triangle_red.png")
+// special textures
+let bombTexture = SKTexture(imageNamed: "cr_bomb.png")
+let surpriseTexture = SKTexture(imageNamed: "cr_surprise.png")
 
 // Size params
 let scale: CGFloat = 0.3
