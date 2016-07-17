@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import SceneKit
 
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
@@ -41,21 +42,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         countdown()
         
         self.physicsWorld.contactDelegate = self
-        self.physicsWorld.gravity = CGVectorMake(0.0, 2.0)
+        self.physicsWorld.gravity = CGVectorMake(0.0, 3.0)
     
     }
     
     
     func setupGameDefinitions(){
         
-        crystalTypes.append(CrystalType(id:0, texture:crystalOneTexture, health:2, points:320, size:crystalWidth))
-        crystalTypes.append(CrystalType(id:1, texture:crystalTwoTexture, health:4, points:480, size:crystalWidth))
-        crystalTypes.append(CrystalType(id:2, texture:crystalThreeTexture, health:6, points:630, size:crystalWidth))
-        crystalTypes.append(CrystalType(id:3, texture:crystalFourTexture, health:8, points:960, size:crystalWidth))
-        crystalTypes.append(CrystalType(id:4, texture:crystalFiveTexture, health:10, points:1250, size:crystalWidth))
-        crystalTypes.append(CrystalType(id:5, texture:crystalSixTexture, health:12, points:1500, size:crystalWidth))
-        crystalTypes.append(CrystalType(id:6, texture:crystalSevenTexture, health:16, points:1850, size:crystalWidth))
-        crystalTypes.append(CrystalType(id:7, texture:crystalEightTexture, health:20, points:2500, size:crystalWidth))
+        crystalTypes.append(CrystalType(id:0, texture:crystalOneTexture, health:2, points:320, size:crystalWidth , color:SKColor(red: 7.0/255.0, green: 191.0/255.0, blue: 215.0/255.0, alpha: 1.0)))
+        crystalTypes.append(CrystalType(id:1, texture:crystalTwoTexture, health:4, points:480, size:crystalWidth, color:SKColor(red: 145.0/255.0, green: 39.0/255.0, blue: 143.0/255.0, alpha: 1.0)))
+        crystalTypes.append(CrystalType(id:2, texture:crystalThreeTexture, health:6, points:630, size:crystalWidth, color:SKColor(red: 197.0/255.0, green: 65.0/255.0, blue: 104.0/255.0, alpha: 1.0)))
+        crystalTypes.append(CrystalType(id:3, texture:crystalFourTexture, health:8, points:960, size:crystalWidth, color:SKColor(red: 255.0/255.0, green: 203.0/255.0, blue: 5.0/255.0, alpha: 1.0)))
+        crystalTypes.append(CrystalType(id:4, texture:crystalFiveTexture, health:10, points:1250, size:crystalWidth, color:SKColor(red: 241.0/255.0, green: 91.0/255.0, blue: 64.0/255.0, alpha: 1.0)))
+        crystalTypes.append(CrystalType(id:5, texture:crystalSixTexture, health:12, points:1500, size:crystalWidth, color:SKColor(red: 145.0/255.0, green: 39.0/255.0, blue: 143.0/255.0, alpha: 1.0)))
+        crystalTypes.append(CrystalType(id:6, texture:crystalSevenTexture, health:16, points:1850, size:crystalWidth, color:SKColor(red: 53.0/255.0, green: 171.0/255.0, blue: 143.0/255.0, alpha: 1.0)))
+        crystalTypes.append(CrystalType(id:7, texture:crystalEightTexture, health:20, points:2500, size:crystalWidth, color:SKColor(red: 215.0/255.0, green: 25.0/255.0, blue: 32.0/255.0, alpha: 1.0)))
 
     }
     
@@ -73,9 +74,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     func spawnRow(){
-        for (index, gem) in currentLevel.data[rowCount].enumerate() { spawnCrystal(CGFloat(index),gemID: Int(gem as! NSNumber))}
-        rowCount = rowCount+1
-        if rowCount > currentLevel.data.count{ lastRow = true }
+        if rowCount < currentLevel.data.count{
+            for (index, gem) in currentLevel.data[rowCount].enumerate() { spawnCrystal(CGFloat(index),gemID: Int(gem as! NSNumber))}
+            rowCount = rowCount+1
+        }else{
+            lastRow = true
+        }
     }
     
     func getTypeForID(id:Int) -> CrystalType { return crystalTypes[id] }
@@ -124,6 +128,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         gemLayer = SKNode()
         gemLayer.name = "Gem Layer"
         addChild(gemLayer)
+        
+        effectLayer = SKNode()
+        effectLayer.name = "Effect Layer"
+        addChild(effectLayer)
     }
     
     func setupBg() {
@@ -156,6 +164,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
+        if firstBody.categoryBitMask == bitMasks.CrystalCategory && secondBody.categoryBitMask == bitMasks.BorderCategory {
+            print("Crystal colided with border at: ",firstBody.node!.position.y)
+        }
+        
         
         if firstBody.categoryBitMask == bitMasks.BulletCategory && secondBody.categoryBitMask == bitMasks.CrystalCategory {
             self.objectsToRemove.append(firstBody.node!) // cleanup bullet
@@ -164,12 +176,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let status = ct.takeDamage(1)
             print("health : "+String(ct.healthPoints)+"     scorePoints : "+String(ct.scorePoints))
             if status == 0 {
+                print("status == 0")
                 self.objectsToRemove.append(ct)
                 print("ADDING TO SCORE ",String(ct.scorePoints))
                 print("ADD particles at : x ",ct.position.x,"  y: ",ct.position.y)
+                explosion(CGPointMake(ct.position.x,ct.position.y), col: ct.vo!.colorValue)
             }
-            
         }
+    }
+    
+    func explosion(pos: CGPoint, col:SKColor) {
+        print("MAKE EXPLOSION")
+        let emitterNode = SKEmitterNode(fileNamed: "Explosion.sks")
+        
+        emitterNode!.particleColorSequence = nil;
+        emitterNode!.particleColorBlendFactor = 1.0;
+        emitterNode!.particleColor = col
+        
+        let effectNode = SKEffectNode()
+        effectNode.zPosition = 20
+        emitterNode!.particlePosition = pos
+        effectNode.addChild(emitterNode!)
+        self.addChild(effectNode)
+        // Don't forget to remove the emitter node after the explosion
+        self.runAction(SKAction.waitForDuration(2), completion: {
+            print("removing explosion")
+            emitterNode!.removeFromParent()
+        })
+        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
@@ -206,10 +240,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if gameon{
             for child in gemLayer.children {
                 let pos = child.position as CGPoint
-                let yPos = pos.y-CGFloat(1*levelratio)
+                let yPos = pos.y-CGFloat(gameSpeed)
                 child.position = CGPoint(x:pos.x, y:yPos)
             }
-            moveCount = moveCount+1
+            moveCount = moveCount+Int(gameSpeed)
             if moveCount >= rowHeight{
                 spawnRow()
                 moveCount = 0

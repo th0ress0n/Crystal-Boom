@@ -16,13 +16,15 @@ class CrystalType {
     var healthValue:Int
     var pointsValue:Int
     var sizeValue:CGFloat
+    var colorValue:SKColor
     
-    init(id:Int, texture:SKTexture, health:Int, points:Int, size:CGFloat){
+    init(id:Int, texture:SKTexture, health:Int, points:Int, size:CGFloat, color:SKColor){
         self.typeID = id
         self.textureName = texture
         self.healthValue = health
         self.pointsValue = points
         self.sizeValue = size
+        self.colorValue = color
     }
     
 }

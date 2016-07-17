@@ -32,11 +32,11 @@ class ammo: SKNode {
         self.physicsBody = SKPhysicsBody(circleOfRadius: sp.size.width/2)
 //        self.physicsBody?.dynamic = true
 //        self.physicsBody?.affectedByGravity = false            // ( physical body stuff )
-        self.physicsBody?.mass = 0.5
+        self.physicsBody?.mass = 0.6
         self.physicsBody?.friction = 0
         self.physicsBody?.restitution = 1.0
         self.physicsBody?.linearDamping = 0
-        self.physicsBody?.angularDamping = 0
+        self.physicsBody?.angularDamping = 0.5
         
         self.physicsBody?.categoryBitMask = bitMasks.BulletCategory
 //        self.physicsBody?.collisionBitMask = bitMasks.BorderCategory

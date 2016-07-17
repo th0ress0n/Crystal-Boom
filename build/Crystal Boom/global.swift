@@ -42,10 +42,13 @@ var gameScene: SKScene!
 
 let cannonPosition = CGPoint(x: frameW*0.5, y: 20)
 
+var gameSpeed:CGFloat = 2.0
+
 //-------------------------------
 var nodesToRemove = [SKNode]()
 var objectsLayer: SKNode!
 var gemLayer: SKNode!
+var effectLayer: SKNode!
 //-------------------------------
 
 var crystalTypes = [CrystalType]()

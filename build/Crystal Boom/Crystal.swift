@@ -9,21 +9,26 @@
 import UIKit
 import SpriteKit
 
-class crystal: character {
+class crystal: SKNode {
     
     var health = 10  // define the values required by the protocols used ( pTargetable here )
+    var scorePoints = 0
+    var healthPoints = 0
+    var vo:CrystalType?
     
     override init() {
         super.init()   //  initialize the default values from the SuperClass ( character )
     }
     
     func setup(def:CrystalType){
-        scorePoints = def.pointsValue
-        healthPoints = def.healthValue
+        vo = def
         
-        let texture = def.textureName
-        let xSize = def.sizeValue //texture.size().width*scale
-        let ySize = def.sizeValue //texture.size().height*scale
+        scorePoints = vo!.pointsValue
+        healthPoints = vo!.healthValue
+        
+        let texture = vo!.textureName
+        let xSize = vo!.sizeValue //texture.size().width*scale
+        let ySize = vo!.sizeValue //texture.size().height*scale
         let size = CGSize(width: xSize, height: ySize)
         
         self.physicsBody = SKPhysicsBody(texture: texture, size: size)
@@ -56,7 +61,6 @@ class crystal: character {
         healthPoints -= damage
         print("You lost \(damage) hit points")
         if healthPoints <= 0 {
-            die()
             print("You are dead now")
         }
         return healthPoints
