@@ -22,7 +22,6 @@ class MenuScene: SKScene {
     }
     
     func open() -> Void {
-        print("open")
         let scene = LevelScene(fileNamed: "LevelScene")!
         let transition = SKTransition.moveInWithDirection(.Right, duration: 1)
         self.view?.presentScene(scene, transition: transition)
@@ -33,15 +32,12 @@ class MenuScene: SKScene {
         
         if let location = touches.first?.locationInNode(self) {
             let touchedNode = nodeAtPoint(location)
-            
             print("touchedNode.name ",touchedNode.name)
-            
             if touchedNode.name == "playBtn" {
                 let transition = SKTransition.fadeWithDuration(1.0)//SKTransition.revealWithDirection(.Down, duration: 1.0)
                 
                 let nextScene = LevelScene(size: scene!.size)
                 nextScene.scaleMode = .AspectFill
-                
                 scene?.view?.presentScene(nextScene, transition: transition)
             }
         }

@@ -26,13 +26,10 @@ class LevelScene: SKScene {
             let location = touch.locationInNode(self)
             // Check if the location of the touch is within the button's bounds
             if nextBtn.containsPoint(location) {
-                print("tapped!")
-                
                 let transition = SKTransition.fadeWithDuration(1.0)//SKTransition.revealWithDirection(.Down, duration: 1.0)
                 
                 let nextScene = GameScene(size: scene!.size)
                 nextScene.scaleMode = .AspectFill
-                
                 scene?.view?.presentScene(nextScene, transition: transition)
             }
         }
