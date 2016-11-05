@@ -38,13 +38,13 @@
 		A49EEA111D3193E5009E3D49 /* cr_round_gold.png in Resources */ = {isa = PBXBuildFile; fileRef = A49EEA091D3193E5009E3D49 /* cr_round_gold.png */; };
 		A49EEA121D3193E5009E3D49 /* cr_round_pink.png in Resources */ = {isa = PBXBuildFile; fileRef = A49EEA0A1D3193E5009E3D49 /* cr_round_pink.png */; };
 		A49EEA131D3193E5009E3D49 /* cr_square_red.png in Resources */ = {isa = PBXBuildFile; fileRef = A49EEA0B1D3193E5009E3D49 /* cr_square_red.png */; };
-		A49EEA141D3193E5009E3D49 /* cr_triangle_aqua.png in Resources */ = {isa = PBXBuildFile; fileRef = A49EEA0C1D3193E5009E3D49 /* cr_triangle_aqua.png */; };
 		A49EEA151D3193E5009E3D49 /* cr_triangle_red.png in Resources */ = {isa = PBXBuildFile; fileRef = A49EEA0D1D3193E5009E3D49 /* cr_triangle_red.png */; };
 		A49EEA171D319EE6009E3D49 /* CrystalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49EEA161D319EE6009E3D49 /* CrystalType.swift */; };
 		A4A3E9341D3427EB00FFEB16 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A3E9331D3427EB00FFEB16 /* Level.swift */; };
 		A4A4595C1D35608700D3B70F /* Explode.scnp in Resources */ = {isa = PBXBuildFile; fileRef = A4A4595B1D35608700D3B70F /* Explode.scnp */; };
 		A4A459731D3712E100D3B70F /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = A4A459711D3712E100D3B70F /* Explosion.sks */; };
 		A4A459741D3712E100D3B70F /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A4A459721D3712E100D3B70F /* spark.png */; };
+		A4FE68951D95B1EC00DD4CC5 /* cr_triangle_aqua2.png in Resources */ = {isa = PBXBuildFile; fileRef = A4FE68941D95B1EC00DD4CC5 /* cr_triangle_aqua2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,13 +102,13 @@
 		A49EEA091D3193E5009E3D49 /* cr_round_gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cr_round_gold.png; sourceTree = "<group>"; };
 		A49EEA0A1D3193E5009E3D49 /* cr_round_pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cr_round_pink.png; sourceTree = "<group>"; };
 		A49EEA0B1D3193E5009E3D49 /* cr_square_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cr_square_red.png; sourceTree = "<group>"; };
-		A49EEA0C1D3193E5009E3D49 /* cr_triangle_aqua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cr_triangle_aqua.png; sourceTree = "<group>"; };
 		A49EEA0D1D3193E5009E3D49 /* cr_triangle_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cr_triangle_red.png; sourceTree = "<group>"; };
 		A49EEA161D319EE6009E3D49 /* CrystalType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrystalType.swift; sourceTree = "<group>"; };
 		A4A3E9331D3427EB00FFEB16 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		A4A4595B1D35608700D3B70F /* Explode.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Explode.scnp; sourceTree = "<group>"; };
 		A4A459711D3712E100D3B70F /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
 		A4A459721D3712E100D3B70F /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		A4FE68941D95B1EC00DD4CC5 /* cr_triangle_aqua2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cr_triangle_aqua2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,8 +232,8 @@
 				A49EEA081D3193E5009E3D49 /* cr_diamond_yellow.png */,
 				A49EEA091D3193E5009E3D49 /* cr_round_gold.png */,
 				A49EEA0A1D3193E5009E3D49 /* cr_round_pink.png */,
+				A4FE68941D95B1EC00DD4CC5 /* cr_triangle_aqua2.png */,
 				A49EEA0B1D3193E5009E3D49 /* cr_square_red.png */,
-				A49EEA0C1D3193E5009E3D49 /* cr_triangle_aqua.png */,
 				A49EEA0D1D3193E5009E3D49 /* cr_triangle_red.png */,
 				A49EE9FB1D2EDC19009E3D49 /* Gem.png */,
 			);
@@ -313,18 +313,25 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = SAMBAVIKING;
 				TargetAttributes = {
 					A49EE9B01D2E9C0A009E3D49 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ZWJY3MNGM6;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					A49EE9C81D2E9C0B009E3D49 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ZWJY3MNGM6;
+						LastSwiftMigration = 0800;
 						TestTargetID = A49EE9B01D2E9C0A009E3D49;
 					};
 					A49EE9D31D2E9C0B009E3D49 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ZWJY3MNGM6;
+						LastSwiftMigration = 0800;
 						TestTargetID = A49EE9B01D2E9C0A009E3D49;
 					};
 				};
@@ -354,7 +361,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A49EEA141D3193E5009E3D49 /* cr_triangle_aqua.png in Resources */,
 				A49EE9B71D2E9C0B009E3D49 /* GameScene.sks in Resources */,
 				A49EEA151D3193E5009E3D49 /* cr_triangle_red.png in Resources */,
 				A49EEA121D3193E5009E3D49 /* cr_round_pink.png in Resources */,
@@ -373,6 +379,7 @@
 				A49EE9FC1D2EDC19009E3D49 /* Gem.png in Resources */,
 				A49EE9C01D2E9C0B009E3D49 /* Assets.xcassets in Resources */,
 				A49EEA0E1D3193E5009E3D49 /* cr_diamond_purple.png in Resources */,
+				A4FE68951D95B1EC00DD4CC5 /* cr_triangle_aqua2.png in Resources */,
 				A49EE9F81D2ED505009E3D49 /* bg.jpg in Resources */,
 				A49EEA041D317279009E3D49 /* CannonLG.png in Resources */,
 				A49EE9E81D2E9E2F009E3D49 /* cannon.png in Resources */,
@@ -482,13 +489,17 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: SAMBAVIKING PTY. LTD. (ZWJY3MNGM6)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: SAMBAVIKING PTY. LTD. (ZWJY3MNGM6)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = ZWJY3MNGM6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -527,13 +538,17 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = ZWJY3MNGM6;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -547,6 +562,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -555,10 +571,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Crystal Boom/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sambaviking.Crystal-Boom";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sambaviking.crystalboom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -566,10 +585,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Crystal Boom/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sambaviking.Crystal-Boom";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sambaviking.crystalboom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -582,6 +604,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sambaviking.Crystal-BoomTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crystal Boom.app/Crystal Boom";
 			};
 			name = Debug;
@@ -594,6 +617,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sambaviking.Crystal-BoomTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crystal Boom.app/Crystal Boom";
 			};
 			name = Release;
@@ -606,6 +630,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sambaviking.Crystal-BoomUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Crystal Boom";
 			};
 			name = Debug;
@@ -617,6 +642,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sambaviking.Crystal-BoomUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Crystal Boom";
 			};
 			name = Release;

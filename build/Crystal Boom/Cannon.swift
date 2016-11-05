@@ -30,9 +30,9 @@ class cannon: character {
         self.addChild(top)
     }
     
-    func setAngle(angle:CGFloat) {
-        let rotateAction = SKAction.rotateByAngle(angle, duration: 0.0)
-        self.runAction(rotateAction)
+    func setAngle(_ angle:CGFloat) {
+        let rotateAction = SKAction.rotate(byAngle: angle, duration: 0.0)
+        self.run(rotateAction)
     }
     
     required init?(coder aDecoder: NSCoder) {

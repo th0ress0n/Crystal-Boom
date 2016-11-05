@@ -20,7 +20,7 @@ class crystal: SKNode {
         super.init()   //  initialize the default values from the SuperClass ( character )
     }
     
-    func setup(def:CrystalType){
+    func setup(_ def:CrystalType){
         vo = def
         
         scorePoints = vo!.pointsValue
@@ -32,7 +32,7 @@ class crystal: SKNode {
         let size = CGSize(width: xSize, height: ySize)
         
         self.physicsBody = SKPhysicsBody(texture: texture, size: size)
-        self.physicsBody?.dynamic = false
+        self.physicsBody?.isDynamic = false
         self.physicsBody?.affectedByGravity = false            // ( physical body stuff )
         self.physicsBody?.mass = 1.0
         self.name = "crystal"
@@ -57,7 +57,7 @@ class crystal: SKNode {
     
     
     
-    func takeDamage(damage: Int) -> Int {
+    func takeDamage(_ damage: Int) -> Int {
         healthPoints -= damage
         print("You lost \(damage) hit points")
         if healthPoints <= 0 {

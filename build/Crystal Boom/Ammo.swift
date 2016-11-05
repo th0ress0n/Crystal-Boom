@@ -18,7 +18,7 @@ class ammo: SKNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func addTop(withTexture: SKTexture) {
+    func addTop(_ withTexture: SKTexture) {
         let sp = SKSpriteNode()
         
         let xSize = withTexture.size().width*bulletscale             // Create The texture for the top ( visible sprite )

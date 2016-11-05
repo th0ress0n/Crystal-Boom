@@ -18,14 +18,14 @@ class projectile: SKNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func addTop(withTexture: SKTexture) {   // Function for adding the visible texture
+    func addTop(_ withTexture: SKTexture) {   // Function for adding the visible texture
         
         let xSize = withTexture.size().width*bulletscale             // Create The texture for the top ( visible sprite )
         let ySize = withTexture.size().height*bulletscale
         let size = CGSize(width: xSize, height: ySize)
         
         self.physicsBody = SKPhysicsBody(texture: withTexture, size: size)
-        self.physicsBody?.dynamic = true
+        self.physicsBody?.isDynamic = true
         self.physicsBody?.affectedByGravity = false            // ( physical body stuff )
         self.physicsBody?.mass = 0.5
         self.physicsBody?.friction = 0

@@ -23,14 +23,14 @@ let crystalThreeTexture = SKTexture(imageNamed: "cr_round_pink.png")
 let crystalFourTexture = SKTexture(imageNamed: "cr_diamond_yellow.png")
 let crystalFiveTexture = SKTexture(imageNamed: "cr_square_red.png")
 let crystalSixTexture = SKTexture(imageNamed: "cr_diamond_purple.png")
-let crystalSevenTexture = SKTexture(imageNamed: "cr_triangle_aqua.png")
+let crystalSevenTexture = SKTexture(imageNamed: "cr_triangle_aqua2.png")
 let crystalEightTexture = SKTexture(imageNamed: "cr_triangle_red.png")
 // special textures
 let bombTexture = SKTexture(imageNamed: "cr_bomb.png")
 let surpriseTexture = SKTexture(imageNamed: "cr_surprise.png")
 
 // Size params
-let scale: CGFloat = 0.3
+let scale: CGFloat = 1
 let cannonscale: CGFloat = 0.4
 let bulletscale: CGFloat = 0.25
 
@@ -42,10 +42,11 @@ var frameH = gameScene.frame.size.height
 let bulletSwipeYMin:CGFloat = 180.0
 
 var gameScene: SKScene!
+var menuScene: SKScene!
 
 let cannonPosition = CGPoint(x: frameW*0.5, y: 20)
 
-var gameSpeed:CGFloat = 2.0
+var gameSpeed:CGFloat = 1.2
 
 //-------------------------------
 var nodesToRemove = [SKNode]()
@@ -68,7 +69,8 @@ struct layers {
     static let background: CGFloat = 0
     static let characters: CGFloat = 2
     static let projectiles: CGFloat = 3
-    
+    static let navigation: CGFloat = 4
+
 }
 
 struct bitMasks {
