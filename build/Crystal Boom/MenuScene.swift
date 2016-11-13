@@ -62,13 +62,13 @@ class MenuScene: SKScene {
         if let location = touches.first?.location(in: self) {
             let touchedNode = atPoint(location)
             print("touchedNode.name ",touchedNode.name);
-//            if touchedNode.name == "playBtn" {
-//                let transition = SKTransition.fade(withDuration: 1.0)//SKTransition.revealWithDirection(.Down, duration: 1.0)
-//                
-//                let nextScene = LevelScene(size: scene!.size)
-//                nextScene.scaleMode = .aspectFill
-//                scene?.view?.presentScene(nextScene, transition: transition)
-//            }
+            if touchedNode.name == "playBtn" {
+                let transition = SKTransition.fade(withDuration: 1.0)//SKTransition.revealWithDirection(.Down, duration: 1.0)
+                
+                let nextScene = LevelScene(size: scene!.size)
+                nextScene.scaleMode = .aspectFill
+                scene?.view?.presentScene(nextScene, transition: transition)
+            }
         }
     }
     

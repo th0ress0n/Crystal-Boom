@@ -31,7 +31,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         gameScene = self
         
         crystalWidth = self.frame.size.width/8
-        rowHeight = Int(crystalWidth)
+        rowHeight = Int(crystalWidth*0.8) // fix this
         setupGameDefinitions()
         setupLevels()
         setupLayers()

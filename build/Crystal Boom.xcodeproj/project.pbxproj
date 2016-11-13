@@ -11,6 +11,15 @@
 		A40C104F1D3C26E400ADAF28 /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C104E1D3C26E400ADAF28 /* LevelScene.swift */; };
 		A40C10531D3C443100ADAF28 /* cr_surprise.png in Resources */ = {isa = PBXBuildFile; fileRef = A40C10511D3C443100ADAF28 /* cr_surprise.png */; };
 		A40C10541D3C443100ADAF28 /* cr_bomb.png in Resources */ = {isa = PBXBuildFile; fileRef = A40C10521D3C443100ADAF28 /* cr_bomb.png */; };
+		A486F8991DD128AB00B09F65 /* CR_aqua.png in Resources */ = {isa = PBXBuildFile; fileRef = A486F8901DD128AB00B09F65 /* CR_aqua.png */; };
+		A486F89A1DD128AB00B09F65 /* CR_aquaTwo.png in Resources */ = {isa = PBXBuildFile; fileRef = A486F8911DD128AB00B09F65 /* CR_aquaTwo.png */; };
+		A486F89B1DD128AB00B09F65 /* CR_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = A486F8921DD128AB00B09F65 /* CR_blue.png */; };
+		A486F89C1DD128AB00B09F65 /* CR_green.png in Resources */ = {isa = PBXBuildFile; fileRef = A486F8931DD128AB00B09F65 /* CR_green.png */; };
+		A486F89D1DD128AB00B09F65 /* CR_pink.png in Resources */ = {isa = PBXBuildFile; fileRef = A486F8941DD128AB00B09F65 /* CR_pink.png */; };
+		A486F89E1DD128AB00B09F65 /* CR_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = A486F8951DD128AB00B09F65 /* CR_purple.png */; };
+		A486F89F1DD128AB00B09F65 /* CR_red.png in Resources */ = {isa = PBXBuildFile; fileRef = A486F8961DD128AB00B09F65 /* CR_red.png */; };
+		A486F8A01DD128AB00B09F65 /* CR_redTwo.png in Resources */ = {isa = PBXBuildFile; fileRef = A486F8971DD128AB00B09F65 /* CR_redTwo.png */; };
+		A486F8A11DD128AB00B09F65 /* CR_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = A486F8981DD128AB00B09F65 /* CR_yellow.png */; };
 		A49EE9B51D2E9C0B009E3D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49EE9B41D2E9C0B009E3D49 /* AppDelegate.swift */; };
 		A49EE9B71D2E9C0B009E3D49 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A49EE9B61D2E9C0B009E3D49 /* GameScene.sks */; };
 		A49EE9B91D2E9C0B009E3D49 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49EE9B81D2E9C0B009E3D49 /* GameScene.swift */; };
@@ -69,6 +78,15 @@
 		A40C104E1D3C26E400ADAF28 /* LevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
 		A40C10511D3C443100ADAF28 /* cr_surprise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cr_surprise.png; sourceTree = "<group>"; };
 		A40C10521D3C443100ADAF28 /* cr_bomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cr_bomb.png; sourceTree = "<group>"; };
+		A486F8901DD128AB00B09F65 /* CR_aqua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CR_aqua.png; sourceTree = "<group>"; };
+		A486F8911DD128AB00B09F65 /* CR_aquaTwo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CR_aquaTwo.png; sourceTree = "<group>"; };
+		A486F8921DD128AB00B09F65 /* CR_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CR_blue.png; sourceTree = "<group>"; };
+		A486F8931DD128AB00B09F65 /* CR_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CR_green.png; sourceTree = "<group>"; };
+		A486F8941DD128AB00B09F65 /* CR_pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CR_pink.png; sourceTree = "<group>"; };
+		A486F8951DD128AB00B09F65 /* CR_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CR_purple.png; sourceTree = "<group>"; };
+		A486F8961DD128AB00B09F65 /* CR_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CR_red.png; sourceTree = "<group>"; };
+		A486F8971DD128AB00B09F65 /* CR_redTwo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CR_redTwo.png; sourceTree = "<group>"; };
+		A486F8981DD128AB00B09F65 /* CR_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CR_yellow.png; sourceTree = "<group>"; };
 		A49EE9B11D2E9C0B009E3D49 /* Crystal Boom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crystal Boom.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A49EE9B41D2E9C0B009E3D49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A49EE9B61D2E9C0B009E3D49 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -229,6 +247,15 @@
 				A40C10501D3C442000ADAF28 /* specials */,
 				A49EEA061D3193E5009E3D49 /* cr_diamond_purple.png */,
 				A49EEA071D3193E5009E3D49 /* cr_round_aqua.png */,
+				A486F8901DD128AB00B09F65 /* CR_aqua.png */,
+				A486F8911DD128AB00B09F65 /* CR_aquaTwo.png */,
+				A486F8921DD128AB00B09F65 /* CR_blue.png */,
+				A486F8931DD128AB00B09F65 /* CR_green.png */,
+				A486F8941DD128AB00B09F65 /* CR_pink.png */,
+				A486F8951DD128AB00B09F65 /* CR_purple.png */,
+				A486F8961DD128AB00B09F65 /* CR_red.png */,
+				A486F8971DD128AB00B09F65 /* CR_redTwo.png */,
+				A486F8981DD128AB00B09F65 /* CR_yellow.png */,
 				A49EEA081D3193E5009E3D49 /* cr_diamond_yellow.png */,
 				A49EEA091D3193E5009E3D49 /* cr_round_gold.png */,
 				A49EEA0A1D3193E5009E3D49 /* cr_round_pink.png */,
@@ -367,22 +394,31 @@
 				A40C10541D3C443100ADAF28 /* cr_bomb.png in Resources */,
 				A4A459731D3712E100D3B70F /* Explosion.sks in Resources */,
 				A40C10531D3C443100ADAF28 /* cr_surprise.png in Resources */,
+				A486F89A1DD128AB00B09F65 /* CR_aquaTwo.png in Resources */,
 				A49EE9C31D2E9C0B009E3D49 /* LaunchScreen.storyboard in Resources */,
+				A486F8A01DD128AB00B09F65 /* CR_redTwo.png in Resources */,
 				A4A4595C1D35608700D3B70F /* Explode.scnp in Resources */,
 				A49EEA131D3193E5009E3D49 /* cr_square_red.png in Resources */,
 				A49EEA101D3193E5009E3D49 /* cr_diamond_yellow.png in Resources */,
+				A486F8991DD128AB00B09F65 /* CR_aqua.png in Resources */,
+				A486F89D1DD128AB00B09F65 /* CR_pink.png in Resources */,
 				A4A459741D3712E100D3B70F /* spark.png in Resources */,
 				A49EEA111D3193E5009E3D49 /* cr_round_gold.png in Resources */,
+				A486F8A11DD128AB00B09F65 /* CR_yellow.png in Resources */,
 				A49EE9E91D2E9E2F009E3D49 /* ball.png in Resources */,
 				A49EEA0F1D3193E5009E3D49 /* cr_round_aqua.png in Resources */,
+				A486F89E1DD128AB00B09F65 /* CR_purple.png in Resources */,
+				A486F89F1DD128AB00B09F65 /* CR_red.png in Resources */,
 				A49EE9FE1D3050CD009E3D49 /* ball_sm.png in Resources */,
 				A49EE9FC1D2EDC19009E3D49 /* Gem.png in Resources */,
 				A49EE9C01D2E9C0B009E3D49 /* Assets.xcassets in Resources */,
+				A486F89C1DD128AB00B09F65 /* CR_green.png in Resources */,
 				A49EEA0E1D3193E5009E3D49 /* cr_diamond_purple.png in Resources */,
 				A4FE68951D95B1EC00DD4CC5 /* cr_triangle_aqua2.png in Resources */,
 				A49EE9F81D2ED505009E3D49 /* bg.jpg in Resources */,
 				A49EEA041D317279009E3D49 /* CannonLG.png in Resources */,
 				A49EE9E81D2E9E2F009E3D49 /* cannon.png in Resources */,
+				A486F89B1DD128AB00B09F65 /* CR_blue.png in Resources */,
 				A49EE9BE1D2E9C0B009E3D49 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
