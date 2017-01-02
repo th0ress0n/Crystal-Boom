@@ -27,6 +27,11 @@ let homeInfoBtn = SKTexture(imageNamed: "homeInfoBtn.png")
 let homeHighscoreBtn = SKTexture(imageNamed: "homeHighscoreBtn.png")
 let homeSettingsBtn = SKTexture(imageNamed: "homeSettingsBtn.png")
 
+// Modal assets
+let modalBGMed = SKTexture(imageNamed: "modalBGMed.png")
+let modalCloseBtn = SKTexture(imageNamed: "modalCloseBtn.png")
+let modalToggleOn = SKTexture(imageNamed: "modalToggleOn.png")
+let modalToggleOff = SKTexture(imageNamed: "modalToggleOff.png")
 
 // Crystal Textures
 let crystalOneTexture = SKTexture(imageNamed: "CR_aqua.png")

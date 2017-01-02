@@ -61,6 +61,10 @@
 		A4F485C81E1AE76200504113 /* homePlayBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F485C41E1AE76200504113 /* homePlayBtn.png */; };
 		A4F485C91E1AE76200504113 /* homeSettingsBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F485C51E1AE76200504113 /* homeSettingsBtn.png */; };
 		A4F485CB1E1AF2EC00504113 /* homeBG.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F485CA1E1AF2EC00504113 /* homeBG.png */; };
+		A4F485CF1E1B062900504113 /* modalCloseBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F485CC1E1B062900504113 /* modalCloseBtn.png */; };
+		A4F485D01E1B062900504113 /* modalToggleOff.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F485CD1E1B062900504113 /* modalToggleOff.png */; };
+		A4F485D11E1B062900504113 /* modalToggleOn.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F485CE1E1B062900504113 /* modalToggleOn.png */; };
+		A4F485D31E1B06A700504113 /* modalBGMed.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F485D21E1B06A700504113 /* modalBGMed.png */; };
 		A4F9F6A91DECAAD7007EDBC2 /* homeLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F9F6A81DECAAD7007EDBC2 /* homeLogo.png */; };
 		A4FE68951D95B1EC00DD4CC5 /* cr_triangle_aqua2.png in Resources */ = {isa = PBXBuildFile; fileRef = A4FE68941D95B1EC00DD4CC5 /* cr_triangle_aqua2.png */; };
 /* End PBXBuildFile section */
@@ -143,6 +147,10 @@
 		A4F485C41E1AE76200504113 /* homePlayBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homePlayBtn.png; path = ../../../../design/homePlayBtn.png; sourceTree = "<group>"; };
 		A4F485C51E1AE76200504113 /* homeSettingsBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeSettingsBtn.png; path = ../../../../design/homeSettingsBtn.png; sourceTree = "<group>"; };
 		A4F485CA1E1AF2EC00504113 /* homeBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homeBG.png; path = ../../../../design/homeBG.png; sourceTree = "<group>"; };
+		A4F485CC1E1B062900504113 /* modalCloseBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = modalCloseBtn.png; path = ../../../../design/modalCloseBtn.png; sourceTree = "<group>"; };
+		A4F485CD1E1B062900504113 /* modalToggleOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = modalToggleOff.png; path = ../../../../design/modalToggleOff.png; sourceTree = "<group>"; };
+		A4F485CE1E1B062900504113 /* modalToggleOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = modalToggleOn.png; path = ../../../../design/modalToggleOn.png; sourceTree = "<group>"; };
+		A4F485D21E1B06A700504113 /* modalBGMed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = modalBGMed.png; path = ../../../../design/modalBGMed.png; sourceTree = "<group>"; };
 		A4F9F6A81DECAAD7007EDBC2 /* homeLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeLogo.png; sourceTree = "<group>"; };
 		A4FE68941D95B1EC00DD4CC5 /* cr_triangle_aqua2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cr_triangle_aqua2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -257,8 +265,12 @@
 				A49EEA031D317279009E3D49 /* CannonLG.png */,
 				A4F9F6A81DECAAD7007EDBC2 /* homeLogo.png */,
 				A4F485C21E1AE76200504113 /* homeHighscoreBtn.png */,
+				A4F485D21E1B06A700504113 /* modalBGMed.png */,
 				A4F485C31E1AE76200504113 /* homeInfoBtn.png */,
 				A4F485C41E1AE76200504113 /* homePlayBtn.png */,
+				A4F485CC1E1B062900504113 /* modalCloseBtn.png */,
+				A4F485CD1E1B062900504113 /* modalToggleOff.png */,
+				A4F485CE1E1B062900504113 /* modalToggleOn.png */,
 				A4F485CA1E1AF2EC00504113 /* homeBG.png */,
 				A4F485C51E1AE76200504113 /* homeSettingsBtn.png */,
 				A42D8FDF1DE9F2D500549847 /* hud_bg.png */,
@@ -433,6 +445,7 @@
 				A4A4595C1D35608700D3B70F /* Explode.scnp in Resources */,
 				A49EEA131D3193E5009E3D49 /* cr_square_red.png in Resources */,
 				A49EEA101D3193E5009E3D49 /* cr_diamond_yellow.png in Resources */,
+				A4F485D01E1B062900504113 /* modalToggleOff.png in Resources */,
 				A486F8991DD128AB00B09F65 /* CR_aqua.png in Resources */,
 				A486F89D1DD128AB00B09F65 /* CR_pink.png in Resources */,
 				A4A459741D3712E100D3B70F /* spark.png in Resources */,
@@ -454,7 +467,10 @@
 				A4FE68951D95B1EC00DD4CC5 /* cr_triangle_aqua2.png in Resources */,
 				A49EE9F81D2ED505009E3D49 /* bg.jpg in Resources */,
 				A49EEA041D317279009E3D49 /* CannonLG.png in Resources */,
+				A4F485D31E1B06A700504113 /* modalBGMed.png in Resources */,
+				A4F485CF1E1B062900504113 /* modalCloseBtn.png in Resources */,
 				A42D8FE01DE9F2D500549847 /* hud_bg.png in Resources */,
+				A4F485D11E1B062900504113 /* modalToggleOn.png in Resources */,
 				A49EE9E81D2E9E2F009E3D49 /* cannon.png in Resources */,
 				A486F89B1DD128AB00B09F65 /* CR_blue.png in Resources */,
 				A49EE9BE1D2E9C0B009E3D49 /* Main.storyboard in Resources */,

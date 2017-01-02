@@ -20,6 +20,12 @@ class MenuScene: SKScene {
     var logo: SKSpriteNode! = nil
     var playBtnImg: SKSpriteNode! = nil
     
+    var modalBGimg: SKSpriteNode! = nil
+    var modalCloseimg: SKSpriteNode! = nil
+    var modalToggleOnimg: SKSpriteNode! = nil
+    var modalToggleOffimg: SKSpriteNode! = nil
+    
+    
     override func didMove(to view: SKView) {
         menuScene = self;
         setupBg();
@@ -131,6 +137,28 @@ class MenuScene: SKScene {
                 
             }
             
+        }
+    }
+    
+    func openModal(type:String){
+        modalBGimg = SKSpriteNode(texture: modalBGMed)
+        modalCloseimg = SKSpriteNode(texture: modalCloseBtn)
+        modalToggleOnimg = SKSpriteNode(texture: modalToggleOn)
+        modalToggleOffimg = SKSpriteNode(texture: modalToggleOff)
+        
+        switch type {
+            case "settings":
+                // --
+                break;
+            case "info":
+                // --
+                break;
+            case "highscore":
+                // --
+                break;
+            default:
+                // -
+                break;
         }
     }
     
