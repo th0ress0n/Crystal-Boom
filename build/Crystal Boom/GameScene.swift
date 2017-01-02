@@ -23,26 +23,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var crystalWidth:CGFloat = 0 // set dynamically on init
     var levelratio = 1
     var shotcount = 0
-    var shotInt = 3
+    var shotInt = 2
+    
+    var countdownTimer: Timer!
     
     var gun:cannon = cannon()
+    var scoreBoard:ScoreBoard = ScoreBoard()
     
     override func didMove(to view: SKView) {
         gameScene = self
         
         crystalWidth = self.frame.size.width/8
         rowHeight = Int(crystalWidth*0.8) // fix this
+        
         setupGameDefinitions()
         setupLevels()
         setupLayers()
         setupBg()
         addPhysicsdBorders()
         spawnCannon(cannonPosition)
-        
-        currentLevel = levels[levelSelected] 
-        
+        addScoreboard()
+        currentLevel = levels[levelSelected]
         countdown()
-        
         self.physicsWorld.contactDelegate = self
         self.physicsWorld.gravity = CGVector(dx: 0.0, dy: 3.0)
     
@@ -65,13 +67,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
    
     func countdown(){
         // create visual countdown to prepare player
+        
+        countdownTimer = Timer.scheduledTimer(timeInterval: 0.9, target: self, selector: #selector(animateCountdown), userInfo: nil, repeats: true)
+        
         startGame()
+    }
+    
+    func animateCountdown(){
+        
     }
     
     
     func startGame(){
         spawnRow()
         gameon = true
+    }
+    
+    func addScoreboard(){
+        scoreBoard.position = CGPoint( x:screenSize.width/2, y:screenSize.height)
+        hudLayer.addChild(scoreBoard)
     }
     
     
@@ -134,6 +148,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         effectLayer = SKNode()
         effectLayer.name = "Effect Layer"
         addChild(effectLayer)
+        
+        hudLayer = SKNode()
+        hudLayer.zPosition = 20
+        hudLayer.name = "Hud Layer"
+        addChild(hudLayer)
+        
+        modalLayer = SKNode()
+        modalLayer.zPosition = 30
+        modalLayer.name = "Modal Layer"
+        addChild(modalLayer)
     }
     
     func setupBg() {
@@ -181,6 +205,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 print("status == 0")
                 self.objectsToRemove.append(ct)
                 print("ADDING TO SCORE ",String(ct.scorePoints))
+                
+                
+                
+                scoreBoard.addPoints(ct.scorePoints)
+                
+//                scoreBoard.addPoints(Int(ct.scorePoints))
+                
                 print("ADD particles at : x ",ct.position.x,"  y: ",ct.position.y)
                 explosion(CGPoint(x: ct.position.x,y: ct.position.y), col: ct.vo!.colorValue)
             }
@@ -207,6 +238,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         })
         
     }
+    
+    // Modal handling ----------------------
+    
+    func showSettings(){
+        
+    }
+    
+    func hideSettings(){
+    
+    }
+    
+    func showHighscore(){
+        
+    }
+    
+    func hideHighscore(){
+        
+    }
+    
+    func showInfo(){
+        
+    }
+    
+    // -------------------------------------
+    
+    
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         let touch = touches.first

@@ -41,8 +41,8 @@ class projectile: SKNode {
         top.colorBlendFactor = 1.0
         // add the top sprite to the SKNode
         self.addChild(top)
+        
     }
-    
 }
 
 class cannonBall: projectile {

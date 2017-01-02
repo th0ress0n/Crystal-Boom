@@ -15,6 +15,18 @@ let texturesBulletSmall = SKTexture(imageNamed: "ball_sm.png")
 let textureCrystal = SKTexture(imageNamed: "Gem.png")
 
 let texturesBg = SKTexture(imageNamed: "bg.jpg")
+let texturesHomeBg = SKTexture(imageNamed: "homeBG.png")
+
+let textureHUD = SKTexture(imageNamed: "hud_bg.png")
+
+let textureLogo = SKTexture(imageNamed: "homeLogo.png")
+
+// home buttons
+let homePlayBtn = SKTexture(imageNamed: "homePlayBtn.png")
+let homeInfoBtn = SKTexture(imageNamed: "homeInfoBtn.png")
+let homeHighscoreBtn = SKTexture(imageNamed: "homeHighscoreBtn.png")
+let homeSettingsBtn = SKTexture(imageNamed: "homeSettingsBtn.png")
+
 
 // Crystal Textures
 let crystalOneTexture = SKTexture(imageNamed: "CR_aqua.png")
@@ -29,12 +41,14 @@ let crystalEightTexture = SKTexture(imageNamed: "CR_red.png")
 let bombTexture = SKTexture(imageNamed: "cr_bomb.png")
 let surpriseTexture = SKTexture(imageNamed: "cr_surprise.png")
 
+
 // Size params
 let scale: CGFloat = 1
 let cannonscale: CGFloat = 0.4
 let bulletscale: CGFloat = 0.25
 
 //------------------------------
+var screenSize: CGRect = UIScreen.main.bounds
 var frameW = gameScene.frame.size.width
 var frameH = gameScene.frame.size.height
 //------------------------------
@@ -53,6 +67,8 @@ var nodesToRemove = [SKNode]()
 var objectsLayer: SKNode!
 var gemLayer: SKNode!
 var effectLayer: SKNode!
+var hudLayer: SKNode!
+var modalLayer: SKNode!
 //-------------------------------
 
 var crystalTypes = [CrystalType]()
