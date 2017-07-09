@@ -29,6 +29,7 @@ let homeSettingsBtn = SKTexture(imageNamed: "homeSettingsBtn.png")
 
 // Modal assets
 let modalBGMed = SKTexture(imageNamed: "modalBGMed.png")
+let modalBGLg = SKTexture(imageNamed: "modalBGLg.png")
 let modalCloseBtn = SKTexture(imageNamed: "modalCloseBtn.png")
 let modalToggleOn = SKTexture(imageNamed: "modalToggleOn.png")
 let modalToggleOff = SKTexture(imageNamed: "modalToggleOff.png")
@@ -62,6 +63,9 @@ let bulletSwipeYMin:CGFloat = 180.0
 
 var gameScene: SKScene!
 var menuScene: SKScene!
+var settingsScene: SKScene!
+var infoScene: SKScene!
+var highscoreScene: SKScene!
 
 let cannonPosition = CGPoint(x: frameW*0.5, y: 20)
 

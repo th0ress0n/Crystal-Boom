@@ -27,6 +27,8 @@ class ammo: SKNode {
         
         sp.texture = withTexture
         sp.size = size
+        sp.zPosition = 1.0; // try
+        
         
         // Physics
         self.physicsBody = SKPhysicsBody(circleOfRadius: sp.size.width/2)

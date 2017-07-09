@@ -95,19 +95,12 @@ class MenuScene: SKScene {
     }
     
     
-    
-    func open() -> Void {
-        let scene = LevelScene(fileNamed: "LevelScene")!
-        let transition = SKTransition.moveIn(with: .right, duration: 1)
-        self.view?.presentScene(scene, transition: transition)
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         
         if let location = touches.first?.location(in: self) {
             let touchedNode = atPoint(location)
-            print("touchedNode.name ",touchedNode.name);
+            print("touchedNode.name ",touchedNode.name!);
             
             // play game
             if touchedNode.name == "playBtn" {
@@ -116,51 +109,41 @@ class MenuScene: SKScene {
                 let nextScene = GameScene(size: scene!.size)
                 nextScene.scaleMode = .aspectFill
                 scene?.view?.presentScene(nextScene, transition: transition)
+            }else{
+                print("Opening Modal with label : ",touchedNode.name!)
+                openModal(type: touchedNode.name!)
             }
-            
-            // Settings Screen
-            if touchedNode.name == "settingsBtn" {
-                print("Open settings screen")
-                
-            }
-            
-            // Info Screen
-            if touchedNode.name == "infoBtn" {
-                print("Open info screen")
-                
-            }
-            
-            
-            // Highscore Screen
-            if touchedNode.name == "highscoreBtn" {
-                print("Open highscore screen")
-                
-            }
-            
         }
     }
     
+    
+    
     func openModal(type:String){
-        modalBGimg = SKSpriteNode(texture: modalBGMed)
-        modalCloseimg = SKSpriteNode(texture: modalCloseBtn)
-        modalToggleOnimg = SKSpriteNode(texture: modalToggleOn)
-        modalToggleOffimg = SKSpriteNode(texture: modalToggleOff)
-        
+        let transition = SKTransition.crossFade(withDuration: 0.5)
         switch type {
-            case "settings":
-                // --
+            case "settingsBtn":
+                let nextScene = SettingsScene(size: scene!.size)
+                nextScene.scaleMode = .aspectFill
+                scene?.view?.presentScene(nextScene, transition: transition)
                 break;
-            case "info":
-                // --
+            case "infoBtn":
+                let nextScene = InfoScene(size: scene!.size)
+                nextScene.scaleMode = .aspectFill
+                scene?.view?.presentScene(nextScene, transition: transition)
                 break;
-            case "highscore":
-                // --
+            case "highscoreBtn":
+                let nextScene = HighscoreScene(size: scene!.size)
+                nextScene.scaleMode = .aspectFill
+                scene?.view?.presentScene(nextScene, transition: transition)
                 break;
             default:
                 // -
                 break;
         }
     }
+    
+    
+    
     
     override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */

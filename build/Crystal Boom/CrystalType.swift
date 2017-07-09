@@ -12,14 +12,16 @@ import SpriteKit
 class CrystalType {
 
     var typeID:Int
+    var typeName:String
     var textureName:SKTexture
     var healthValue:Int
     var pointsValue:Int
     var sizeValue:CGFloat
     var colorValue:SKColor
     
-    init(id:Int, texture:SKTexture, health:Int, points:Int, size:CGFloat, color:SKColor){
+    init(id:Int, name:String, texture:SKTexture, health:Int, points:Int, size:CGFloat, color:SKColor){
         self.typeID = id
+        self.typeName = name
         self.textureName = texture
         self.healthValue = health
         self.pointsValue = points
