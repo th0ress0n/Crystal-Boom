@@ -75,7 +75,7 @@ class ScoreBoard: SKNode{
     
     func addPoints(_ point: Int) {
         print("Points added ",point)
-        targetVal = targetVal + point
+        targetVal = targetVal + (point*currentMulti)
         animateIncrement()
     }
     
@@ -85,7 +85,7 @@ class ScoreBoard: SKNode{
     }
     
     func animateIncrement(){
-        animateTimer = Timer.scheduledTimer(timeInterval: 0.002, target: self, selector: #selector(showAnimatedValue), userInfo: nil, repeats: true)
+        animateTimer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(showAnimatedValue), userInfo: nil, repeats: true)
     }
     
     // -----------------------
@@ -112,8 +112,22 @@ class ScoreBoard: SKNode{
     
     
     func showAnimatedValue(){
-        if total < targetVal { total = total + 1 }
-        if total > targetVal { total = total - 1 }
+        if total < targetVal {
+            let hplus = (targetVal-total)/10
+            if hplus < 1 {
+                total = targetVal
+            }else{
+                total = Int(ceil(Double(total + hplus)))
+            }
+        }
+        if total > targetVal {
+            let hmin = (total-targetVal)/10
+            if hmin < 1 {
+                total = targetVal
+            }else{
+                total = Int(ceil(Double(total - hmin)))
+            }
+        }
         let scoreStr = String(total)
         let scorelength = scoreStr.characters.count
         var output = ""

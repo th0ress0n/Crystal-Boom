@@ -86,6 +86,7 @@ var crystalTypes = [CrystalType]()
 var levelSelected:Int = 0
 var levels = [Level]()
 var currentLevel:Level!
+var currentMulti:Int = 1
 //-------------------------------
 
 
