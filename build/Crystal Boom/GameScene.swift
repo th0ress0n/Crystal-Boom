@@ -258,14 +258,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let crt = itm 
             let dist:CGFloat = getDistance(_trigger: _triggerPoint, _item: child.position)
             if dist < frameW*0.5  {
-                print(dist, " <--> ",frameW)
                 bombScore = bombScore + crt.scorePoints                     // Add to score for explosion
                 explosion(child.position, col: crt.vo!.colorValue)          // Add Explosion
                 self.objectsToRemove.append(crt)                            // remove item
             }
         }
-        print(<#T##items: Any...##Any#>)
         scoreBoard.addPoints(bombScore)
+        print("The BombScore : ",bombScore)
     }
     
     func explosion(_ pos: CGPoint, col:SKColor) {
