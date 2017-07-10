@@ -212,24 +212,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if firstBody.categoryBitMask == bitMasks.BulletCategory && secondBody.categoryBitMask == bitMasks.CrystalCategory {
             self.objectsToRemove.append(firstBody.node!) // cleanup bullet
-            // remove health from crystal
             let ct = secondBody.node as! crystal
-            let status = ct.takeDamage(1)
-            print("health : "+String(ct.healthPoints)+"     scorePoints : "+String(ct.scorePoints))
+            let status = ct.takeDamage(1) // remove health from crystal
+//            print("health : "+String(ct.healthPoints)+"     scorePoints : "+String(ct.scorePoints))
             if status == 0 {
-                print("status == 0")
                 
-                // test for specific kind of object
-                if ct.name == "Surprise" {
+                if ct.vo?.typeName == "Surprise" { // test for specific kind of object
                     // trigger Surprise
                     currentMulti = currentMulti + 1
-                }
-                
-                
-                if ct.name == "Bomb" {
-                    // trigger Bomb
+                    scoreBoard.setMulti(currentMulti) // Set the multiplier
+                }else if ct.vo?.typeName == "Bomb" {
                     currentMulti = 1
-                    // blow up whats on the screen
+                    scoreBoard.setMulti(currentMulti) // Set the multiplier
+                    triggerBomb(_triggerPoint: CGPoint(x: ct.position.x,y: ct.position.y)) // trigger Bomb
+                    
+                }else{
+                    explosion(CGPoint(x: ct.position.x,y: ct.position.y), col: ct.vo!.colorValue)
                 }
                 
                 
@@ -241,29 +239,48 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 scoreBoard.addPoints(ct.scorePoints)
                 
                 
-                print("ADD particles at : x ",ct.position.x,"  y: ",ct.position.y)
-                
-                explosion(CGPoint(x: ct.position.x,y: ct.position.y), col: ct.vo!.colorValue)
             }
         }
     }
     
-    func explosion(_ pos: CGPoint, col:SKColor) {
-        print("MAKE EXPLOSION")
-        let emitterNode = SKEmitterNode(fileNamed: "Explosion.sks")
+    func getDistance(_trigger:CGPoint, _item:CGPoint) -> CGFloat {
+        let xDist = _trigger.x - _item.x
+        let yDist = _trigger.y - _item.y
+        return CGFloat(sqrt((xDist * xDist) + (yDist * yDist)))
+    }
+    
+    
+    func triggerBomb(_triggerPoint:CGPoint){
+        var bombScore:Int = 0
         
+        for child in gemLayer.children {
+            let itm:crystal = child as! crystal
+            let crt = itm 
+            let dist:CGFloat = getDistance(_trigger: _triggerPoint, _item: child.position)
+            if dist < frameW*0.5  {
+                print(dist, " <--> ",frameW)
+                bombScore = bombScore + crt.scorePoints                     // Add to score for explosion
+                explosion(child.position, col: crt.vo!.colorValue)          // Add Explosion
+                self.objectsToRemove.append(crt)                            // remove item
+            }
+        }
+        print(<#T##items: Any...##Any#>)
+        scoreBoard.addPoints(bombScore)
+    }
+    
+    func explosion(_ pos: CGPoint, col:SKColor) {
+//        print("MAKE EXPLOSION")
+        let emitterNode = SKEmitterNode(fileNamed: "Explosion.sks")
         emitterNode!.particleColorSequence = nil;
         emitterNode!.particleColorBlendFactor = 1.0;
         emitterNode!.particleColor = col
-        
         let effectNode = SKEffectNode()
         effectNode.zPosition = 20
         emitterNode!.particlePosition = pos
         effectNode.addChild(emitterNode!)
         self.addChild(effectNode)
-        // Don't forget to remove the emitter node after the explosion
-        self.run(SKAction.wait(forDuration: 2), completion: {
-            print("removing explosion")
+        self.run(SKAction.wait(forDuration: 2), completion: {   // Don't forget to remove the emitter node after the explosion
+//            print("removing explosion")
             emitterNode!.removeFromParent()
         })
         

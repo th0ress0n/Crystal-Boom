@@ -21,7 +21,7 @@ class crystal: SKNode {
     }
     
     func setup(_ def:CrystalType){
-        vo = def
+        self.vo = def
         
         scorePoints = vo!.pointsValue
         healthPoints = vo!.healthValue
@@ -48,9 +48,7 @@ class crystal: SKNode {
         // add the top sprite
         self.addChild(top)
     }
-    
-    
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -59,9 +57,9 @@ class crystal: SKNode {
     
     func takeDamage(_ damage: Int) -> Int {
         healthPoints -= damage
-        print("You lost \(damage) hit points")
+//        print("You lost \(damage) hit points")
         if healthPoints <= 0 {
-            print("You are dead now")
+//            print("You are dead now")
         }
         return healthPoints
     }
