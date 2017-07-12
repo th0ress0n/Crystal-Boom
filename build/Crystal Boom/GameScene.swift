@@ -342,6 +342,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func update(_ currentTime: TimeInterval) {
         cleaning()
+        // trigger shot mechanism
         if isFingerDown {
             shotcount = shotcount + 1
             if shotcount == shotInt{
@@ -355,6 +356,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let pos = child.position as CGPoint
                 let yPos = pos.y-CGFloat(gameSpeed)
                 child.position = CGPoint(x:pos.x, y:yPos)
+                if child.position.y < -child.frame.height {
+                    self.objectsToRemove.append(child)
+                }
+                
             }
             if !lastRow {
                 moveCount = moveCount+Int(gameSpeed)
@@ -362,11 +367,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     spawnRow()
                     moveCount = 0
                 }
+            }else{
+                // test if the level should end
+                var levelend = true
+                for child in gemLayer.children {
+                    if child.position.y > frameH/3 {
+                        levelend = false
+                    }
+                }
+                // stop everything - trigger intermission sequence.
+                if levelend {
+                    endLevel();
+                }
             }
             
         }
+    }
+    
+    func endLevel(){
         
     }
+    
+    
+    
+    
+    
+    
     
     // Settup the level data here.
     
