@@ -26,7 +26,7 @@ class ScoreBoard: SKNode{
     
     var currentLevel = 0
     
-    var multiplier = 0
+    var multiplier = 1
     
     override init() {
         super.init()   //  initialize the default values from the SuperClass ( character )
