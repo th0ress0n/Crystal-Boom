@@ -55,6 +55,7 @@
 		A4A4595C1D35608700D3B70F /* Explode.scnp in Resources */ = {isa = PBXBuildFile; fileRef = A4A4595B1D35608700D3B70F /* Explode.scnp */; };
 		A4A459731D3712E100D3B70F /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = A4A459711D3712E100D3B70F /* Explosion.sks */; };
 		A4A459741D3712E100D3B70F /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A4A459721D3712E100D3B70F /* spark.png */; };
+		A4A818F01F27A23F00C24919 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A818EF1F27A23F00C24919 /* Audio.swift */; };
 		A4C9BAC11E2D501D00DD308A /* HighscoreScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C9BAC01E2D501D00DD308A /* HighscoreScene.swift */; };
 		A4C9BAC31E2D504B00DD308A /* InfoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C9BAC21E2D504B00DD308A /* InfoScene.swift */; };
 		A4C9BAC51E2D506600DD308A /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C9BAC41E2D506600DD308A /* SettingsScene.swift */; };
@@ -145,6 +146,7 @@
 		A4A4595B1D35608700D3B70F /* Explode.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Explode.scnp; sourceTree = "<group>"; };
 		A4A459711D3712E100D3B70F /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
 		A4A459721D3712E100D3B70F /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		A4A818EF1F27A23F00C24919 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 		A4C9BAC01E2D501D00DD308A /* HighscoreScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighscoreScene.swift; sourceTree = "<group>"; };
 		A4C9BAC21E2D504B00DD308A /* InfoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoScene.swift; sourceTree = "<group>"; };
 		A4C9BAC41E2D506600DD308A /* SettingsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 				A4C9BAC21E2D504B00DD308A /* InfoScene.swift */,
 				A4C9BAC41E2D506600DD308A /* SettingsScene.swift */,
 				A4C9BAC81E2D675900DD308A /* GameScoreManager.swift */,
+				A4A818EF1F27A23F00C24919 /* Audio.swift */,
 			);
 			path = "Crystal Boom";
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A818F01F27A23F00C24919 /* Audio.swift in Sources */,
 				A49EE9F01D2EA2EE009E3D49 /* global.swift in Sources */,
 				A49EEA021D30578D009E3D49 /* Ammo.swift in Sources */,
 				A49EE9FA1D2ED897009E3D49 /* Crystal.swift in Sources */,
@@ -680,7 +684,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Crystal Boom/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sambaviking.crystalboom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -694,7 +698,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Crystal Boom/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sambaviking.crystalboom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
