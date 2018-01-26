@@ -129,9 +129,9 @@ class ScoreBoard: SKNode{
             }
         }
         let scoreStr = String(total)
-        let scorelength = scoreStr.characters.count
+        let scorelength = scoreStr.count
         var output = ""
-        while output.characters.count < (10-scorelength) { output += "0" }
+        while output.count < (10-scorelength) { output += "0" }
         output += scoreStr
         scoreLabel.text = output
     }
